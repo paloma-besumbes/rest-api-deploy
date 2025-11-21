@@ -1,0 +1,52 @@
+### Recuperar todas las películas
+
+GET http://localhost:1234/movies
+
+
+### Recuperar una película por id
+
+GET http://localhost:1234/movies/2
+
+
+### Recuperar todas las películas por un género
+
+GET http://localhost:1234/movies?genre=Action
+
+
+### Crear una película con POST
+### Importante dejar una línea vacía entre las cabeceras y el cuerpo del JSON (Si no, da error)
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+
+{
+"title": "Frankenstein",
+"year": 1955,
+"director": "Gorrino" ,
+"duration": 90,
+"poster": "https://play-lh.googleusercontent.com/L6o8ajDgfGhYZv1mwD5WfjmUUPnMnP0NlPNp5NVg-I4V9mM0D6n-ZR80z2QVtBnWoLir=w240-h480-rw",
+"genre": ["Fantasy", "Comedy", "Children" ]
+
+}
+
+# {
+# "title": "Matilda",
+# "year": 1994,
+# "director": "Robert de Niro",
+# "duration": 90,
+# "poster": "https://play-lh.googleusercontent.com/L6o8ajDgfGhYZv1mwD5WfjmUUPnMnP0NlPNp5NVg-I4V9mM0D6n-ZR80z2QVtBnWoLir=w240-h480-rw",
+# "genre": ["Fantasy", "Comedy", "Children" ]
+
+# }
+
+
+### Actualizar una película
+
+PATCH http://localhost:1234/movies/ccf36f2e-8566-47f7-912d-9f4647250bc7
+Content-Type: application/json
+
+{
+    "year":"1998"
+}
+
+
