@@ -1,9 +1,10 @@
 {
-  "name": "rest-api",
+  "name": "rest-api-deploy",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
+    "dev": "nodemon app.js",
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +12,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "5.1.0",
-    "zod": "4.1.12"
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
   }
 }
